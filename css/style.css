@@ -94,6 +94,7 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-align: left;
 }
 
 .todo-item {
@@ -104,6 +105,10 @@ body {
 }
 
 .todo-item:hover {
+    background-color: #ddf0e2;
+}
+
+.todo-item.completed {
     background-color: #ddf0e2;
 }
 
@@ -129,6 +134,7 @@ body {
 .todo-item span {
     font-size: 16px;
     line-height: 21px;
+    font-weight: 600;
 }
 
 @media(min-width: 500px) {
