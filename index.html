@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>ToDo App</title>
+    <title>Приложение Список дел</title>
 </head>
 <body>
 
-    <h1>Hello world</h1>
-    
+    <div class="wrapper">
+        <div class="todo-container">    
+            <h1 class="todo-title">Список дел</h1>
+            <form id="todo-form" class="todo-form" action="javascript:void(0);">
+                <input type="text" id="newTask" class="todo-input" placeholder="Введите задачу">
+                <button class="todo-btn todo-btn-primary">Добавить</button>
+            </form>
+
+            <ul class="todo-list" id="tasksList">
+                <li class="todo-item">
+                    <label class="todo-item-label">
+                        <input class="todo-checkbox" type="checkbox">
+                        <span class="completed">Заверстать приложение</span>
+                        <button class="todo-btn todo-btn-secondary">Удалить</button>
+                    </label>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- App Js Todo -->
+    <script src="js/todo/model.js" type="module"></script>
+    <script src="js/todo/view.js" type="module"></script>
+    <script src="js/todo/controller.js" type="module"></script>
 </body>
 </html>

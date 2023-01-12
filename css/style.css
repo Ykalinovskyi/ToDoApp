@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 940px;
+    background-color: #ffffff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.todo-container {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 95%;
+    padding: 20px 18px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #000000;
+}
+
+.todo-title {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin-top:0;
+    margin-bottom: 20px;
+}
+
+.todo-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.todo-input {
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 80%;
+    font-size: 16px;
+    line-height: 18px;
+    outline: none;
+    transition: all 0.1s ease-in;
+    grid-column: 1/2;
+}
+
+.todo-input:focus,
+.todo-input:active {
+    border-color: #f7f7f7;
+    outline: 3px solid lightblue;
+}
+.todo-input::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    color: #cccccc;
+    font-style: italic;
+}
+
+.todo-btn {
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    outline: none;
+}
+
+.todo-btn:hover,
+.todo-btn:focus {
+    background-color: darkblue;
+}
+
+.todo-btn-primary {
+    padding: 10px;
+}
+.todo-btn-secondary {
+    margin-left: auto;
+    padding: 5px 10px;
+}
+
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-item {
+    margin: 5px 0;
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease-in;
+}
+
+.todo-item:hover {
+    background-color: #ddf0e2;
+}
+
+.todo-item-label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.todo-checkbox {
+    margin: 0;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    outline-color: lightblue;
+}
+
+.todo-item-label .completed {
+    text-decoration: line-through;
+}
+
+.todo-item span {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+@media(min-width: 500px) {
+    .todo-input {
+        width: 100%;
+    }
+    .todo-btn {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .todo-input {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .todo-input::placeholder {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .todo-item span {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .todo-btn-primary {
+        padding: 10px 20px;
+    }
+}
